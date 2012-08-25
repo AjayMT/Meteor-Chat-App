@@ -1,5 +1,5 @@
 <head>
-  <title>users</title>
+  <title>Chat</title>
 </head>
 
 <body>
@@ -7,9 +7,14 @@
 </body>
 
 <template name="loginform">
-  <input type="text" name="username" placeholder="Username here..." class="usrn" />
-  <input type="text" name="password" placeholder="Password here..." class="pass" />
-  <input type="button" value="Login" class="lgn" />
+  {{#unless lgin_usr}}
+  	<div class="lgnform">
+  	  <input type="text" name="username" placeholder="Username here..." class="usrn" />
+  	  <input type="text" name="password" placeholder="Password here..." class="pass" />
+	  	<input type="button" value="Login" class="lgn" />
+    </div>
+	{{/unless}}
+
   {{> main}}
 </template>
 

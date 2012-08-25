@@ -14,3 +14,7 @@ if root.Meteor.is_client
   root.Template.main.usrname = ->
     usr = root.Users.findOne(root.Session.get("lgin_usr"))
     usr.usrn if usr?
+
+  root.Template.loginform.lgin_usr = ->
+		usr = root.Users.findOne(root.Session.get("lgin_usr"))
+		usr and usr.usrn
