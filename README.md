@@ -18,3 +18,8 @@ Run the app:
     meteor
     
 Point your web browser to `localhost:3000` to see the app.
+
+## About Meteor
+
+Meteor is an awesome framework for developing web apps. Find out more about it at http://www.meteor.com
+(By the way, I am not associated with the Meteor people in any way, and I am not sponsoring Meteor.)
