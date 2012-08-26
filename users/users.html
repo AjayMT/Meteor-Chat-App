@@ -14,12 +14,30 @@
   </div>
 </template>
 
+<template name="group">
+  <div class="group {{current}}">
+    <span class="gname">{{name}}</span>
+  </div>
+</template>
+
 <template name="main">
   {{#unless usrname}}
     {{> loginform}}
   {{/unless}}
   
-  <div class="uname">{{usrname}}</div>
+  <div class="uname">{{usrname}}</div><br />
+
+  {{#if usrname}}
+    {{#each groups}}
+      {{> group}}
+    {{/each}}
+    <div class="gform">
+      <input type="text" name="gname" placeholder="Group name..." />
+      <input type="button" class="cg" value="Create Group" />
+    </div>
+  {{/if}}
+
+  <br /><br />
 
   {{#if usrname}}
     {{> chatSection}}
@@ -31,7 +49,7 @@
   <div class="msgs">
     {{#each msgs}}
       <span class="msg">{{msg}}</span> from
-      <span class="from">{{from}}</span>
+	  <span class="from">{{from}}</span><br />
     {{else}}
       No messages yet.
     {{/each}}
