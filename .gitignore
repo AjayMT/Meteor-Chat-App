@@ -4,3 +4,5 @@
 *.coffee~
 
 *.css~
+
+*.DS_Store
