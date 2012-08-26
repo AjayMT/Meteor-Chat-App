@@ -23,21 +23,21 @@
 
   {{#if usrname}}
     {{> chatSection}}
-	<input type="button" class="lgout" value="Logout" />
+    <input type="button" class="lgout" value="Logout" />
   {{/if}}
 </template>
 
 <template name="chatSection">
   <div class="msgs">
     {{#each msgs}}
-	  <span class="msg">{{msg}}</span> from
-	  <span class="from">{{from}}</span>
-	{{else}}
-	  No messages yet.
-	{{/each}}
+      <span class="msg">{{msg}}</span> from
+      <span class="from">{{from}}</span>
+    {{else}}
+      No messages yet.
+    {{/each}}
   </div>
-	<div class="post">
-	<input type="text" name="msg" class="postMsg" placeholder="Say something..." />
-	<input type="button" value="Post" class="postMsgB" />
+  <div class="post">
+    <input type="text" name="msg" class="postMsg" placeholder="Say something..." />
+    <input type="button" value="Post" class="postMsgB" />
   </div>
 </template>
