@@ -19,25 +19,25 @@
     {{> loginform}}
   {{/unless}}
   
-	<div class="uname">{{usrname}}</div>
+  <div class="uname">{{usrname}}</div>
 
   {{#if usrname}}
-	  {{> chatSection}}
-		<input type="button" class="lgout" value="Logout" />
+    {{> chatSection}}
+	<input type="button" class="lgout" value="Logout" />
   {{/if}}
 </template>
 
 <template name="chatSection">
   <div class="msgs">
-	  {{#each msgs}}
-		  <span class="msg">{{msg}}</span> from
-			<span class="from">{{from}}</span>
-	  {{else}}
-		  No messages yet.
-		{{/each}}
+    {{#each msgs}}
+	  <span class="msg">{{msg}}</span> from
+	  <span class="from">{{from}}</span>
+	{{else}}
+	  No messages yet.
+	{{/each}}
   </div>
 	<div class="post">
-		<input type="text" name="msg" class="postMsg" placeholder="Say something..." />
-		<input type="button" value="Post" class="postMsgB" />
-	</div>
+	<input type="text" name="msg" class="postMsg" placeholder="Say something..." />
+	<input type="button" value="Post" class="postMsgB" />
+  </div>
 </template>
