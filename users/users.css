@@ -5,6 +5,14 @@ body {}
 .postMsgB {}
 .usrn {}
 .uname {}
+.group {}
+.group.current {
+  background-color: yellow;
+}
+.gform {}
+.cg {}
+.group .gname {}
+.group.current .gname {}
 .msgs {}
 .msg {}
 .from {}
