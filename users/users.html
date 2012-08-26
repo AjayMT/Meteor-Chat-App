@@ -7,17 +7,15 @@
 </body>
 
 <template name="loginform">
-  {{#unless lgin_usr}}
-  	<div class="lgnform">
-  	  <input type="text" name="username" placeholder="Username here..." class="usrn" />
-  	  <input type="text" name="password" placeholder="Password here..." class="pass" />
-	  	<input type="button" value="Login" class="lgn" />
-    </div>
-	{{/unless}}
+  <div class="lgnform">
+    <input type="text" name="username" placeholder="Username here..." class="usrn" />
+  	<input type="text" name="password" placeholder="Password here..." class="pass" />
+		<input type="button" value="Login" class="lgn" />
+  </div>
 
   {{> main}}
 </template>
 
 <template name="main">
-  {{usrname}}
+	{{usrname}}
 </template>
