@@ -1,5 +1,5 @@
 <head>
-  <title>Chat</title>
+  <title>Chatter</title>
 </head>
 
 <body>
@@ -7,6 +7,7 @@
 </body>
 
 <template name="loginform">
+  <h1>Login to join the conversation!</h1>
   <div class="lgnform">
     <input type="text" name="username" placeholder="Username here..." class="usrn" />
     <input type="text" name="password" placeholder="Password here..." class="pass" />
@@ -26,21 +27,28 @@
       {{> loginform}}
     </center>
   {{/unless}}
-  
+
+  {{#if usrname}}
+    <h3>Hey there, </h3>
+  {{/if}}
   <div class="uname">{{usrname}}</div><br />
   
   {{#if usrname}}
-    {{#each groups}}
-      {{> group}}
-    {{/each}}
+    <div class="groups">
+      <h3>Groups</h3>
+      {{#each groups}}
+        {{> group}}
+      {{else}}
+        No groups yet.
+      {{/each}}
+    </div><br />
     <div class="gform">
       <input type="text" name="gname" placeholder="Group name..." />
       <input type="button" class="cg" value="Create Group" />
     </div>
   {{/if}}
-
-  <br /><br />
-
+  <br />
+  
   {{#if usrname}}
     {{> chatSection}}
     <input type="button" class="lgout" value="Logout" />
@@ -49,15 +57,17 @@
 
 <template name="chatSection">
   <div class="msgs">
+    <h3>Messages</h3>
     {{#each msgs}}
-      <span class="msg">{{msg}}</span> from
-	  <span class="from">{{from}}</span><br />
+      <span class="msg">{{msg}}</span>
+      <span class="from">from {{from}}</span>
     {{else}}
       No messages yet.
     {{/each}}
-  </div>
-  <div class="post">
-    <input type="text" name="msg" class="postMsg" placeholder="Say something..." />
-    <input type="button" value="Post" class="postMsgB" />
-  </div>
+    <br /><br />
+    <div class="post">
+      <input type="text" name="msg" class="postMsg" placeholder="Say something..." />
+      <input type="button" value="Post" class="postMsgB" />
+    </div>
+  </div><br />
 </template>
