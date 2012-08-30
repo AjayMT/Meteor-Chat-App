@@ -4,7 +4,20 @@ body {
   font-weight: 200;
   margin: 100px 200px 100px 200px;
 }
-.post {}
+.post {
+  border-style: dashed none dashed none;
+  border-color: #999;
+  border-width: 4px;
+  border-radius: 5px;
+  background-color: yellow;
+  padding: 5px;
+}
+.groups {
+  border-style: dashed none none none;
+  border-radius: 5px;
+  border-width: 4px;
+  border-color: #999;
+}
 .postMsg {}
 .postMsgB {}
 .usrn {}
@@ -17,12 +30,22 @@ body {
 .cg {}
 .group .gname {}
 .group.current .gname {}
-.msgs {}
+.msgs {
+  border-style: dashed none none none;
+  border-radius: 5px;
+  border-width: 4px;
+  border-color: #999;
+}
 .msg {}
-.from {}
+.from {
+  color: #999;
+}
 .pass {}
 .lgn {}
-.lgout {}
+.lgout {
+  background-color: red;
+  border-radius: 5px;
+}
 .lgnform {
   padding: 10px;
   border-style: dashed;
