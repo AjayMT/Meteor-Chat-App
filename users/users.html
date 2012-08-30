@@ -22,7 +22,9 @@
 
 <template name="main">
   {{#unless usrname}}
-    {{> loginform}}
+    <center>
+      {{> loginform}}
+    </center>
   {{/unless}}
   
   <div class="uname">{{usrname}}</div><br />
