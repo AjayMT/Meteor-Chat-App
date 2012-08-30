@@ -26,8 +26,8 @@ if root.Meteor.is_client
   
   root.Template.chatSection.msgs = ->
     group = root.Groups.findOne(root.Session.get("current_group"))
-    if group? then root.Messages.find({ group: group.name }) else root.Messages.find({})
-  
+    if group? then root.Messages.find({ group: group.name })
+    
   root.Template.chatSection.events =
     'click input.postMsgB': ->
       msg = document.getElementsByName("msg")[0].value
