@@ -44,3 +44,9 @@ if root.Meteor.is_client
   
   root.Template.main.groups = ->
     root.Groups.find({}, { sort: { name: 1 } })
+
+if root.Meteor.is_server
+  Meteor.startup(
+    ->
+      # code to run on server startup
+  )
