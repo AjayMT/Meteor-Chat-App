@@ -27,13 +27,13 @@ if root.Meteor.is_client
   root.Template.chatSection.msgs = ->
     group = root.Groups.findOne(root.Session.get("current_group"))
     if group? then root.Messages.find({ group: group.name })
-    
+  
   root.Template.chatSection.events =
     'click input.postMsgB': ->
       msg = document.getElementsByName("msg")[0].value
       from = root.Users.findOne(root.Session.get("lgin_usr")).usrn
       group = root.Groups.findOne(root.Session.get("current_group"))
-      root.Messages.insert({ msg: msg, from: from, group: group.name }) if group?
+      root.Messages.insert({ msg: msg, from: from, group: group.name }) if group? and msg
   
   root.Template.group.current = ->
     if root.Session.equals("current_group", @_id) then "current" else ""
