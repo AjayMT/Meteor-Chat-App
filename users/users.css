@@ -26,7 +26,20 @@ body {
 .group.current {
   background-color: yellow;
 }
-.gform {}
+.gform {
+  border-style: dashed none dashed none;
+  border-color: #999;
+  border-width: 4px;
+  border-radius: 5px;
+  background-color: yellow;
+  padding: 5px;
+}
+.help {
+  border-style: dashed none none none;
+  border-radius: 5px;
+  border-width: 4px;
+  border-color: #999;
+}
 .cg {}
 .group .gname {}
 .group.current .gname {}
@@ -45,12 +58,13 @@ body {
 .lgout {
   background-color: red;
   border-radius: 5px;
+  color: white;
 }
 .lgnform {
-  padding: 10px;
-  border-style: dashed;
-  border-radius: 5px;
+  border-style: dashed none dashed none;
   border-color: #999;
   border-width: 4px;
+  border-radius: 5px;
   background-color: yellow;
+  padding: 5px;
 }
