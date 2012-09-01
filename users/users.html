@@ -13,6 +13,7 @@
     <input type="text" name="password" placeholder="Password here..." class="pass" />
     <input type="button" value="Login" class="lgn" />
   </div>
+  <center>An account will be created for you if it doesn't exit.</center>
 </template>
 
 <template name="group">
@@ -46,12 +47,23 @@
       <input type="text" name="gname" placeholder="Group name..." />
       <input type="button" class="cg" value="Create Group" />
     </div>
-  {{/if}}
-  <br />
-  
+  {{/if}}<br />
+
   {{#if usrname}}
     {{> chatSection}}
     <input type="button" class="lgout" value="Logout" />
+    {{/if}}<br /><br />
+
+  {{#if usrname}}
+    <div class="help">
+      <h3>Help</h3>
+      <h4>Posting Messages</h4>
+      To post a message, select a group to post it to, type in your message in the messages section, and click on the 'Post' button.
+      <h4>Creating Groups</h4>
+      To create a group, just type in the name of the group in the groups section, and click on the 'Create Group' button.
+      <h4>Logging Out</h4>
+      To log out, just click on the red 'Logout' button.
+    </div>
   {{/if}}
 </template>
 
@@ -59,8 +71,8 @@
   <div class="msgs">
     <h3>Messages</h3>
     {{#each msgs}}
-      <span class="msg">{{msg}}</span>
-      <span class="from">from {{from}}</span>
+      <span class="from"> {{from}}: </span>
+      <span class="msg">{{msg}}</span><br />
     {{else}}
       No messages yet.
     {{/each}}
