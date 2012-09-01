@@ -3,7 +3,7 @@
 Chatter is simple chat app created with Meteor. It has some simple login/logout functionality, chat groups,
 and, obviously, message posting. This was created while playing around with Meteor's simple database managing
 features. Feel free to clone it, modify it, publish it, and anything else. You can see the original app at:
-http://chatter.meteor.com/
+http://groupchat.meteor.com/
 
 ## To Run
 
